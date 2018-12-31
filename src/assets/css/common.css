@@ -1,0 +1,104 @@
+/**
+ * common.css
+ */
+ *{font-family:Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;margin:0;padding:0;font-size:1em;-webkit-tap-highlight-color:rgba(255, 255, 255, 0);}
+body{width:100%;max-width:640px;min-width:320px;color:#666666;padding:0;margin:0 auto;}
+main{display:block;position:relative;overflow:hidden!important;width: 100%;max-width: 640px;}
+input,ol,ul,li,dl,dt,dd,input,h1,h2,h3,h4,h5,h6,.bxt,header{overflow:hidden;}
+ol,ul,li,dl,dt,dd{list-style:none;}
+main img{width:100%;border:none;display: block}
+a{text-decoration:none;outline:none;color:#666;border:none;}
+a, area, input, button, select {outline: none;background-image: url(about:blank);}
+i,em{font-style: normal;}
+.fl{float:left !important;}
+.fr{float:right !important;}
+.clearfix:after{content: "";display: block;clear: both;}
+.cl{display:block;}
+.h{display:none!important;}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+  color: #ccc;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder{
+  color: #ccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+  color: #ccc;
+}
+/*去掉input框默认的黄色背景*/
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  background-color: rgb(0, 0, 0) !important;
+  background-image: none !important;
+  color: rgb(0, 0, 0) !important;
+  -webkit-tap-highlight-color:rgba(0,0,0,0) !important;
+}
+/*基准字号*/
+html{font-size:32px;}
+@media screen and (max-width:330px){
+  html{font-size:16px;}
+}
+@media screen and (min-width:331px) and (max-width:350px){
+  html{font-size:17px;}
+}
+@media screen and (min-width:351px) and (max-width:370px){
+  html{font-size:18px;}
+}
+@media screen and (min-width:371px) and (max-width:390px){
+  html{font-size:19px;}
+}
+@media screen and (min-width:391px) and (max-width:410px){
+  html{font-size:20px;}
+}
+@media screen and (min-width:411px) and (max-width:430px){
+  html{font-size:21px;}
+}
+@media screen and (min-width:431px) and (max-width:450px){
+  html{font-size:22px;}
+}
+@media screen and (min-width:451px) and (max-width:470px){
+  html{font-size:23px;}
+}
+@media screen and (min-width:471px) and (max-width:490px){
+  html{font-size:24px;}
+}
+@media screen and (min-width:491px) and (max-width:510px){
+  html{font-size:25px;}
+}
+@media screen and (min-width:511px) and (max-width:530px){
+  html{font-size:26px;}
+}
+@media screen and (min-width:531px) and (max-width:550px){
+  html{font-size:27px;}
+}
+@media screen and (min-width:551px) and (max-width:570px){
+  html{font-size:28px;}
+}
+@media screen and (min-width:571px) and (max-width:590px){
+  html{font-size:29px;}
+}
+@media screen and (min-width:591px) and (max-width:610px){
+  html{font-size:30px;}
+}
+@media screen and (min-width:611px) and (max-width:630px){
+  html{font-size:31px;}
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.cl:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.h{
+  display: none !important;
+}
+.bl{
+  display: block !important;
+}
