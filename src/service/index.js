@@ -5,6 +5,8 @@
  * @param endAction
  */
 import { Indicator, Toast } from 'mint-ui'
+import VueCookies from 'vue-cookies'
+import Vue from 'vue'
 export const requestAjax = (api, startAction, endAction) => async (data, cb, reject) => {
   // 显示加载图标
   Indicator.open({
@@ -21,10 +23,8 @@ export const requestAjax = (api, startAction, endAction) => async (data, cb, rej
     let data = await resp
     // 406 时间过期,清空存储的用户信息，返回首页
     if ([406, 403].includes(Number(data.data.info.error))) {
-      // wx.clearStorageSync()
-      // wx.redirectTo({
-      //   url: '/pages/home/home'
-      // })
+      Vue.$router.push('/index')
+      VueCookies.remove('tokenId')
     } else if (Number(data.data.info.error) === 400) {
       Toast(data.data.info.message)
     } else if (Number(data.data.info.error) === 0) {

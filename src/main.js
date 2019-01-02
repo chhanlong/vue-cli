@@ -3,6 +3,7 @@ import app from './App'
 import router from './router'
 import store from '@/store'
 import $http from '@/api'
+import VueCookies from 'vue-cookies'
 import {OSS, Domain} from '@/const'
 import {getConstByEnv} from '@/utils'
 // 组件
@@ -19,6 +20,8 @@ Vue.use(Mint)
 
 Vue.prototype.$store = store
 Vue.prototype.$http = $http
+Vue.use(VueCookies)
+Vue.prototype.VueCookies = VueCookies
 // 定义全局变量名称 $imgUrl 图片前缀
 Vue.prototype.$imgUrl = getConstByEnv(OSS)
 // 定义全局变量名称 $Domain 域名前缀

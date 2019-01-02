@@ -65,7 +65,6 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
 export default {
   data () {
     return {
@@ -138,18 +137,12 @@ export default {
     },
     // 判断
     login () {
-      this.tokenId ? this.isLogin = 1 && this.ajaxMember() : this.isLogin = 0
+      this.VueCookies.get('wbiao.memberservice.tokenid') ? this.isLogin = 1 && this.ajaxMember() : this.isLogin = 0
     },
     // 跳转
     jumpLink (link) {
-      this.$router.push({ path: '/pages/webview/index', query: { url: link } })
+      this.$router.push('/index')
     }
-  },
-  // 计算属性，判断图片路径存在
-  computed: {
-    ...mapState({
-      tokenId : state => state.tokenId
-    })
   },
   mounted () {
     this.login()

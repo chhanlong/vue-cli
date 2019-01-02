@@ -56,10 +56,10 @@ export default {
         'terminalType': 'M'
       })
       try {
-        this.$store.commit('tokenId/SET_TOKEN_ID', loginFun.data.data.tokenID)
+        this.VueCookies.set('wbiao.memberservice.tokenid', loginFun.data.data.tokenID)
         // wx.setStorageSync('memberInfo', loginFun.data.data.memberInfo)
         Toast('登录成功')
-        this.$router.go()
+        this.$router.go(-1)
       } catch (e) {}
     },
     // 点击发送验证码

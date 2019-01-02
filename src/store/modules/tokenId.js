@@ -8,7 +8,7 @@ const mutations = {
     console.log('set: ', tokenId)
     state.tokenId = tokenId
   },
-  CLEAR_TOKEN_ID(state) {
+  CLEAR_TOKEN_ID (state) {
     state.tokenId = ''
   }
 }

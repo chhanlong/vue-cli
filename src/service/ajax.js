@@ -1,4 +1,4 @@
-// import Vue from 'vue'
+import VueCookies from 'vue-cookies'
 import {API} from '@/const'
 import axios from 'axios'
 const sign = require('@/utils/sign')
@@ -27,13 +27,13 @@ let getparam = params => {
 }
 
 let axiosJSON = (url, params, target, methodType) => {
-  // let tokenID = wx.getStorageSync('tokenID')
+  let tokenID = VueCookies.get('tokenId')
   // 判断 如果需要登陆才需要把tokenID写入到headers进去
-  // if (target && target.needToken && tokenID) {
-  //   fly.config.headers['wb-token'] = tokenID
-  // } else {
-  //   fly.config.headers = {}
-  // }
+  if (target && target.needToken && tokenID) {
+    axios.defaults.headers['wb-token'] = tokenID
+  } else {
+    axios.defaults.headers = {}
+  }
   if (methodType === 'get') {
     url = params ? url + '?' + getparam(params) : url
     if (target) {
