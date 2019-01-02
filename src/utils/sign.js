@@ -1,3 +1,4 @@
+import VueCookies from 'vue-cookies'
 import {SecretKey} from '@/const'
 import qs from 'qs'
 import {objKeySort} from '@/utils'
@@ -19,10 +20,9 @@ let CommonData = () => {
  * @constructor
  */
 export const Post = (url, body, target) => {
-  // let needToken = target.needToken && wx.getStorageSync('tokenID') ? {
-  //   'wb-token': wx.getStorageSync('tokenID')
-  // } : {}
-  let needToken = {}
+  let needToken = target.needToken && VueCookies.get('wbiao.memberservice.tokenid') ? {
+    'wb-token': VueCookies.get('wbiao.memberservice.tokenid')
+  } : {}
   let commonData = CommonData()
   let sortObject = Object.assign({}, commonData, needToken, {}, {
     body: JSON.stringify(body)
@@ -41,10 +41,9 @@ export const Post = (url, body, target) => {
  * @constructor
  */
 export const Get = (url, body, target) => {
-  // let needToken = target.needToken && wx.getStorageSync('tokenID') ? {
-  //   'wb-token': wx.getStorageSync('tokenID')
-  // } : {}
-  let needToken = {}
+  let needToken = target.needToken && VueCookies.get('wbiao.memberservice.tokenid') ? {
+    'wb-token': VueCookies.get('wbiao.memberservice.tokenid')
+  } : {}
   let commonData = CommonData()
   let sortObject = Object.assign({}, commonData, needToken, body)
   let signObject = objKeySort(sortObject)

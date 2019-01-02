@@ -57,7 +57,7 @@ export default {
       })
       try {
         this.VueCookies.set('wbiao.memberservice.tokenid', loginFun.data.data.tokenID)
-        // wx.setStorageSync('memberInfo', loginFun.data.data.memberInfo)
+        this.VueCookies.set('memberInfo', loginFun.data.data.memberInfo)
         Toast('登录成功')
         this.$router.go(-1)
       } catch (e) {}

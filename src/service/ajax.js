@@ -27,7 +27,7 @@ let getparam = params => {
 }
 
 let axiosJSON = (url, params, target, methodType) => {
-  let tokenID = VueCookies.get('tokenId')
+  let tokenID = VueCookies.get('wbiao.memberservice.tokenid')
   // 判断 如果需要登陆才需要把tokenID写入到headers进去
   if (target && target.needToken && tokenID) {
     axios.defaults.headers['wb-token'] = tokenID

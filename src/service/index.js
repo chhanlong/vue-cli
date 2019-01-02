@@ -24,7 +24,7 @@ export const requestAjax = (api, startAction, endAction) => async (data, cb, rej
     // 406 时间过期,清空存储的用户信息，返回首页
     if ([406, 403].includes(Number(data.data.info.error))) {
       Vue.$router.push('/index')
-      VueCookies.remove('tokenId')
+      VueCookies.remove('wbiao.memberservice.tokenid')
     } else if (Number(data.data.info.error) === 400) {
       Toast(data.data.info.message)
     } else if (Number(data.data.info.error) === 0) {

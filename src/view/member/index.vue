@@ -26,35 +26,29 @@
       <!-- ===我是卖家=== -->
       <h6>我是卖家</h6>
       <div class="list W_sell">
-        <block v-for="(item, index) in sell" :key="index">
-          <a :class="item.border ? 'border':''" @click="jumpLink(item.herf)">
-            <em>{{item.name}}</em>
-            <span>{{item.num}}<i class="icon-d-go01"></i></span>
-          </a>
-        </block>
+        <a :class="item.border ? 'border':''" @click="jumpLink(item.herf)" v-for="(item, index) in sell" :key="index">
+          <em>{{item.name}}</em>
+          <span>{{item.num}}<i class="icon-d-go01"></i></span>
+        </a>
       </div>
       <!-- ===我是买家=== -->
       <h6>我是买家</h6>
       <div class="list W_buy">
-        <block v-for="(item, index) in buy" :key="index">
-          <a :class="item.border ? 'border':''" @click="jumpLink(item.herf)">
-            <em>{{item.name}}</em>
-            <span>{{item.num}}<i class="icon-d-go01"></i></span>
-          </a>
-        </block>
+        <a :class="item.border ? 'border':''" @click="jumpLink(item.herf)" v-for="(item, index) in buy" :key="index">
+          <em>{{item.name}}</em>
+          <span>{{item.num}}<i class="icon-d-go01"></i></span>
+        </a>
       </div>
       <!-- ===收藏留言=== -->
       <div class="list W_other">
-        <block v-for="(item, index) in other" :key="index">
-          <a :class="item.border ? 'border':''" @click="jumpLink(item.herf)">
-            <em>{{item.name}}</em>
-            <span>{{item.num}}<i class="icon-d-go01"></i></span>
-          </a>
-        </block>
+        <a :class="item.border ? 'border':''" @click="jumpLink(item.herf)" v-for="(item, index) in other" :key="index">
+          <em>{{item.name}}</em>
+          <span>{{item.num}}<i class="icon-d-go01"></i></span>
+        </a>
       </div>
       <!-- ===设置=== -->
       <div class="list W_sell install">
-        <a href="/pages/member/set">
+        <a href="/pages/member/set" class="border">
           <em>设置</em>
           <span><i class="icon-d-go01"></i></span>
         </a>
