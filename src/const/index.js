@@ -4,7 +4,7 @@
 // api - 域名
 export const API = {
   test: '/proxy', // 测试环境 https://api-service.wbiaotest.cn
-  production: 'https://api-service.wbiao.com' // 正式环境
+  production: 'http://129.28.73.76/' // 正式环境  //https://api-service.wbiao.com
 }
 // oss's Image - 域名
 export const OSS = {

@@ -3,7 +3,7 @@ import {SecretKey} from '@/const'
 import qs from 'qs'
 import {objKeySort} from '@/utils'
 import MD5 from '@/utils/md5'
-const isProduction = process.env.ENV === 'prod'
+const isProduction = process.env.NODE_ENV === 'production'
 let secret = isProduction ? SecretKey.production : SecretKey.test
 
 let CommonData = () => {

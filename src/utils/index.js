@@ -31,7 +31,7 @@ export const sortOut = ($arr, key) => {
   return result
 }
 export const getConstByEnv = obj => {
-  const isProduction = process.env.ENV === 'prod'
+  const isProduction = process.env.NODE_ENV === 'production'
   return isProduction
     ? obj['production']
     : obj['test']

@@ -3,7 +3,7 @@ import {API} from '@/const'
 import axios from 'axios'
 const sign = require('@/utils/sign')
 // Vue.prototype.$axios = axios
-const isProduction = process.env.ENV === 'prod'
+const isProduction = process.env.NODE_ENV === 'production'
 axios.defaults.baseURL = isProduction ? API.production : API.test
 
 // 获取get链接参数
